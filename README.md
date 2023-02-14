@@ -39,3 +39,25 @@ How do containers manage system resources?
 
 Just as "Namespaces" are responsible for isolating the container in the operating system, there is another concept responsible for managing the allocation of resources 
 in each container, the "CGroups".
+
+## Usage: 
+
+For the Docker container to work, it needs an image, an image that can be found locally or through Docker Hub.
+
+Main steps:
+
+- Reproduce Docker image from a locally made file struct or by cloning a repository.
+- Build the Docker image locally.
+- Start a new container based on the Docker image built in the last step.
+- Share that container through Docker Hub.
+
+NOTE: Docker containers are only running as they perform some task, if the task is terminated the container will also be terminated.
+
+Docker execution flow:
+
+Searches for the image locally -> Downloads the image if not found locally -> Validates the image hash -> Runs the container.
+
+What is a "hash"?
+
+Hash is a mathematical function that converts a file of any size into a fixed length code of letters and numbers. This data representation ends up serving as the 
+file's "fingerprint".
