@@ -53,11 +53,25 @@ Main steps:
 
 NOTE: Docker containers are only running as they perform some task, if the task is terminated the container will also be terminated.
 
-Docker execution flow:
+### Docker execution flow:
 
 Searches for the image locally -> Downloads the image if not found locally -> Validates the image hash -> Runs the container.
 
-What is a "hash"?
+### What is a "hash"?
 
 Hash is a mathematical function that converts a file of any size into a fixed length code of letters and numbers. This data representation ends up serving as the 
 file's "fingerprint".
+
+### What are images?
+
+Images are a set of independent layers that when joined together form an image. They can be reused by several containers without the need for increased storage, the 
+image being only the base and the container being the Read/Wright layer that will interact with the image.
+
+### And what are layers?
+
+Layers are instructions present in a Dockerfile that will be grouped together to form an image. Layers can be reused between different images and cannot be modified, 
+any changes made will be embedded in a new Read/Wright layer from the container.
+
+### Docker Creation Flow:
+
+**Docker File** ---**Build**--> **Image** ---**Run**--> **Container**
