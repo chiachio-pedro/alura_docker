@@ -79,3 +79,13 @@ Types of Volumes:
 - Bind Mount: Binds the OS mount point to the container filesystem.
 
 - Tmpfs Mount: [**Only works on Linux host**] Persists data in the host's memory, but does not write it to the container's Read/Write layer.
+
+### Can containers communicate with each other?
+
+Communication between cointeiners is accomplished through networks that Docker itself creates natively, or created by the user. There are 3 types of networks:
+
+- Bridge: Network that acts as "bridges" between containers. User-defined "Bridge" character networks can find other containers automatically by container name, without the need to use an IP. 
+
+- Host: When using the "Host" driver on some container, such container will baseline the network of the machine it is being hosted on, there will be no more encapsulation between container and host over the network.
+
+- None: When using the "None" driver in some container, such container will not have any kind of interaction with the network, it will remain offline.

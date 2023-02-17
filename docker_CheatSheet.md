@@ -8,6 +8,8 @@ Docker documentation: https://docs.docker.com/
 
 **docker run -it {IMAGE_NAME}** - Run a container available locally, or in DockerHub, on the machine in "*interative mode*".
 
+**docker run --name {CONTAINER_NAME} {IMAGE_NAME}** - Run a container that will have a specific name.
+
 **docker run -d {IMAGE_NAME}** - Run a container available locally, or in DockerHub, on the machine in "*detached mode*".
 
 **docker run -d -P {IMAGE_NAME}** - Run a container available locally, or in DockerHub, on the machine in "*detached mode*" with an random outside port available.
@@ -66,4 +68,10 @@ Docker documentation: https://docs.docker.com/
 
 **docker run -it --mount source={VOLUME_NAME},target={CONTAINER_PATH} {IMAGE_NAME OR IMAGE_ID}** - Create a container with a "Volume" volume.
 
-**docker run -it --mount type=tpmfs,target={CONTAINER_PATH} {IMAGE_NAME OR IMAGE_ID}**
+**docker run -it --mount type=tpmfs,target={CONTAINER_PATH} {IMAGE_NAME OR IMAGE_ID}** - Create a container with a "TMPFS" volume.
+
+**docker network ls** - Show all the configurated networks using Docker.
+
+**docker network create --driver bridge {NETWORK_NAME}** - Create a Docker network using "Bridge" drive.
+
+**docker run -it --name {CONTAINER_NAME} --network {NETWORK_NAME} {IMAGE_NAME}** - Create a container with a specific name and using a previously created network.
