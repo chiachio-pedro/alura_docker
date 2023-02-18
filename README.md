@@ -89,3 +89,7 @@ Communication between cointeiners is accomplished through networks that Docker i
 - Host: When using the "Host" driver on some container, such container will baseline the network of the machine it is being hosted on, there will be no more encapsulation between container and host over the network.
 
 - None: When using the "None" driver in some container, such container will not have any kind of interaction with the network, it will remain offline.
+
+### Docker Compose:
+
+Docker Compose is able to help the user compose multiple containers at once through a ".yml" file.

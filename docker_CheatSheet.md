@@ -75,3 +75,11 @@ Docker documentation: https://docs.docker.com/
 **docker network create --driver bridge {NETWORK_NAME}** - Create a Docker network using "Bridge" drive.
 
 **docker run -it --name {CONTAINER_NAME} --network {NETWORK_NAME} {IMAGE_NAME}** - Create a container with a specific name and using a previously created network.
+
+**docker-compose up** - Run the docker-compose ".yml" file.
+
+**docker-compose up -d** - Run the docker-compose ".yml" file in "*detached mode*".
+
+**docker-compose ls** - Show all the services running with a docker-compose.
+
+**docker-compose_down** - Stop and remove all containers and networks created with docker-compose.
